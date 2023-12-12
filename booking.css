@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Suranna&display=swap');
+:root{
+    --background:#d1d1e9;
+    --labelplaceholder:#2b2c34;
+    --btnbackground:#6246ea;
+    --formbtntxt:#fffffe;
+}
+
+.parent-booking {
+    display: grid;
+    margin-top: 20rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 0px;
+    height: 2000px;
+    }
+    
+    .roombooking { grid-area: 1 / 1 / 2 / 2;
+    margin: 5%;
+    margin-left: 20%;
+padding: 3%;
+font-size: 2rem;
+background-color: var(--background);
+line-height: 4.5rem;
+height: 115rem;
+border-radius: 19px;
+background: #d1d1e9;
+box-shadow:  20px 20px 68px #adadc1,
+             -20px -20px 68px #f5f5ff;}
+    .roombookingoutput { grid-area: 1 / 2 / 2 / 3; 
+        margin: 20%;
+        padding: 2%;
+        font-size: 1.5rem;
+        line-height: 4rem;
+        background-color: var(--background);
+        display: inline-block;
+        height: 30rem;
+        border-radius: 19px;
+        background: #d1d1e9;
+        box-shadow:  20px 20px 68px #adadc1,
+                     -20px -20px 68px #f5f5ff;}
+    .adventurebooking { grid-area: 2 / 1 / 3 / 2;
+        margin: 5%;
+    margin-left: 20%;
+        padding: 2%;
+        font-size: 2rem;
+        background-color: var(--background);
+        line-height: 4.5rem;
+        height: 65rem;
+        border-radius: 19px;
+background: #d1d1e9;
+box-shadow:  20px 20px 68px #adadc1,
+             -20px -20px 68px #f5f5ff;
+    } 
+    .adventurebookingoutput { grid-area: 2 / 2 / 3 / 3; 
+        margin: 20%;
+        padding: 8%;
+        font-size: 2rem;
+        line-height: 4.5rem;
+        background-color: var(--background);
+        display: inline-block;
+        height: 50rem;
+        border-radius: 19px;
+        background: #d1d1e9;
+        box-shadow:  20px 20px 68px #adadc1,
+                     -20px -20px 68px #f5f5ff;}
+    .overalloutput { 
+        border: 1px solid black; 
+        padding: 3%;
+        font-size: 1.5rem;
+        line-height: 4.5rem;
+        background-color: var(--background);
+        display: inline-block;
+         width: 50%;
+        margin-left: 25%;
+        margin-top: 25%;
+        border-radius: 19px;
+background: #d1d1e9;
+box-shadow:  20px 20px 68px #adadc1,
+             -20px -20px 68px #f5f5ff;
+}
+
+    .inlined{
+        width: 20rem;
+        display: inline-block;
+        float: left;
+        margin-left: 1%;
+    }
+    .label{
+        color: var(--labelplaceholder);
+        font-size: 2rem;
+        font-family: 'Suranna', serif;
+        
+    }
+h1{
+    color:var(--btnbackground);
+    font-family: 'Cinzel', serif;
+}
+.input{
+  background-color: #fffffe;
+  cursor: pointer;
+  border-radius: 2px;
+  height: 2rem;
+}
+.legend{
+    color: var(#2b2c34);
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Questrial', sans-serif;
+}
+button{
+    cursor: pointer;
+    background-color: var(--btnbackground);
+    color: var(--formbtntxt);
+    font-size: 1.5rem;
+    width: 100px;
+    height: 30px;
+    display: inline-block;
+    float: left;
+    margin: 3%;
+    text-align: center;
+}
+#outputadventure{
+    height: 20em;
+    margin-top: 20px;
+    border: 2px solid black;
+    margin-top: 5%;
+    background-color: #fffffe;
+    overflow: scroll;
+    height: 250px;
+    font-family: 'Suranna', serif;
+}
+#output{
+    background-color: #fffffe;
+    border: 1px solid black;
+    height: 250px;
+    overflow: scroll;
+    font-family: 'Suranna', serif;
+}
+@media (max-width: 850px) {
+    .parent-booking{
+      grid-template-columns: 2fr;
+    }
+    .roombookingoutput {
+        height: 60rem;
+        width: 100%;
+        grid-template-columns: 2fr;
+    }
+    
+    .roombooking {
+        width: 100%;
+        height: 140rem;
+        grid-template-columns: 2fr;
+    }
+    .adventurebooking{
+        width: 100%;
+        height: 100rem;
+        margin-bottom: 40rem;
+        grid-template-columns: 2fr;
+    }
+    .adventurebookingoutput{
+        width: 100%;
+        grid-template-columns: 2fr;
+   }
+        
+    .overalloutput{
+        margin-top: 40rem;
+        margin-bottom: 10rem;
+        grid-template-columns: 2fr;
+    }
+    button{
+        cursor: pointer;
+        background-color: var(--btnbackground);
+        color: var(--formbtntxt);
+        font-size: 1.5rem;
+        width: 100px;
+        height: 30px;
+        display: inline-block;
+        float: left;
+        margin: 3%;
+        text-align: center;
+    }
+  }
+  

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./booking.css">
+     <!-- favicon #references:Youtube -->
+     <link rel="icon" href="./icons/logo.png" type="image/x-icon">
+</head>
+<body>
+    <!-- header start -->
+    <header class="header">
+        <a href="./index.html" class="logo"><img src="./icons/Logo full.jpg" alt="logo"></a>
+        <nav class="navbar">
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./accomadation.html">Accomadation</a>
+            <a href="./adventures.html">Adventures</a>
+            <a href="./restaurants.html">Restaurant</a>
+            <a href="./restaurants.html">Contact</a>
+            <a href="./booking.html">Book</a>
+        </nav>
+        <section class="icons">
+            <section class="bars" id="menu-btn"><img src="./icons/menu.png" alt="menu"></section>
+        </section>
+    </header>
+    <section class="above">
+        <h1 class="heading">Book<br>Now</h1>
+        <p class="h-p-about">Scroll down</p>
+    </section>
+    <!-- header end -->
+    <section class="parent-booking">
+        <section class="roombooking">
+            <h1>Room Booking</h1>
+            <form action="" id="RoomBookingForm">
+                <!-- Room Type -->
+<fieldset>
+    <legend class="legend">Room Type</legend>
+    <p>
+        <input class="input" type="radio" id="single" name="room" value="single">
+        <label class="label" for="single">Single</label>
+    </p>
+    <p>
+        <input class="input" type="radio" id="double" name="room" value="double">
+        <label class="label" for="double">Double</label>
+    </p>
+    <p>
+        <input class="input" type="radio" id="triple" name="room" value="triple">
+        <label class="label" for="triple">Triple</label>
+    </p>
+</fieldset>
+<!-- number of Guests -->
+<fieldset>
+    <legend class="legend">Number of Guests</legend>
+    <p>
+        <label class="label" class="inlined" for="adult">Adults: </label>
+        <input class="input" type="number" name="adult" id="adult" min="1" value="0" required>
+    </p>
+    <p>
+        <label class="label" class="inlined" for="child">Children: </label>
+        <input class="input" type="number" name="child" id="child" min="0" value="0" >
+    </p>
+</fieldset>
+<!-- Duration of Stay-->
+<fieldset >
+    <legend class="legend">Duration of Stay</legend>
+    <p>
+        <label class="label" class="inlined" for="checkin">Check-in Date</label>
+        <input class="input" type="date" name="checkin" id="checkin" >
+    </p>
+    <p>
+        <label class="label" class="inlined" for="checkout">Check-out Date</label>
+        <input class="input" type="date" name="checkout" id="checkout" >
+    </p>
+</fieldset>
+<!-- number of Rooms -->
+<fieldset>
+    <legend class="legend">Number of Rooms</legend>
+    <p>
+        <label class="label" for="num">Number: </label>
+        <input class="input" type="number" name="num" id="num" min="1" value="0" required>
+    </p>
+</fieldset>
+<!-- Extra REquirements -->
+<fieldset>
+    <legend class="legend">Extra requirements</legend>
+    <p>
+        <label class="label" for="bed">Bed</label>
+        <input class="input" type="checkbox" id="bed" name="extra" value="bed">
+    </p>
+    <p>
+        <label class="label" for="meal">Meal</label>
+        <input class="input" type="checkbox" id="meal" name="extra" value="meal">
+    </p>
+    <p>
+        <label class="label" for="wifi">WIFI</label>
+        <input class="input" type="checkbox" id="wifi" name="wifi" value="wifi">
+    </p>
+    <p>
+        <label class="label" for="garden">Garden View</label>
+        <input class="input" type="checkbox" id="garden" name="garden" value="garden">
+    </p>
+    <p>
+        <label class="label" for="pool">Pool View</label>
+        <input class="input" type="checkbox" id="pool" name="pool" value="pool">
+    </p>
+</fieldset>
+<!-- add to order -->
+<p><button type="submit" id="add">Add to order</button></p>
+<!-- Check Loyalty Points -->
+<p><button type="submit" id="points">Loyalty Points</button></p>
+<!-- Add to favorites -->
+<p><button type="submit" id="favorites">favorites</button></p>
+            </form>
+        </section>
+        <!-- ===============ROOM BOOKING OUTPUT============================ -->
+        <section class="roombookingoutput">
+            <h1>Room Booking Output</h1>
+            <form action="" id="RoomBookingForm">        
+            <fieldset>
+                <legend class="legend">Cost per Room</legend>
+                <p id="cost">0.00</p>
+            </fieldset>
+            <!-- cost per extra -->
+            <fieldset>
+                <legend class="legend">Cost for Extra Charges</legend>
+                <p id="costextra">0.00</p>
+            </fieldset>
+             <!-- Total Cost -->
+             <fieldset>
+                <legend class="legend">Total Cost</legend>
+                <p id="costroomtotal">0.00</p>
+            </fieldset>
+            </form>
+        </section>
+
+        <!-- ======================ADVENTURE BOOKING=========================================== -->
+        <section class="adventurebooking">
+            <h1>Book an Adventure</h1>
+            <form id="BookAdventureForm">
+                <!-- Packages -->
+        <fieldset>
+            <legend class="legend">Adventure Packages</legend>
+            <p>
+                <input class="input" type="checkbox" id="Ladults" name="package" value="Ladults">
+                <label class="label" for="Ladults">Diving for Local Adults</label>
+            </p>
+            <p>
+                <input class="input" type="checkbox" id="Lkids" name="package" value="Lkids">
+                <label class="label" for="Lkids">Diving for Local Kids</label>
+            </p>
+            <p>
+                <input class="input" type="checkbox" id="Fadults" name="package" value="Fadults">
+                <label class="label" for="Fadults">Diving for Foreign Adults</label>
+            </p>
+            <p>
+                <input class="input" type="checkbox" id="Fkids" name="package" value="Fkids">
+                <label class="label" for="Fkids">Diving for Foreign Kids</label>
+            </p>
+        </fieldset>
+        <!-- guide -->
+        <fieldset>
+            <legend class="legend">Do You need a Guide?</legend>
+            <p>
+                <input class="input" type="checkbox" id="GuideAdults" name="guide" value="GuideAdults">
+                <label class="inlined" class="label" for="GuideAdults">For Adults</label>
+            </p>
+            <p>
+                <input class="input" type="checkbox" id="GuideKids" name="guide" value="GuideKids">
+                <label class="inlined" class="label" for="GuideKids">For Kids</label>
+            </p>
+        </fieldset>
+        <!-- number of Guests -->
+        <fieldset>
+            <legend class="legend">Number of Guests</legend>
+            <p>
+                <label class="label" for="numguests">Total Number of Guests: </label>
+                <input class="input" type="number" name="numguests" id="numguests" min="1" value="0" required>
+            </p>
+        </fieldset>
+        <!-- add to order -->
+        <button type="submit" id="orderadv">Add to order</button>
+            </form>
+        </section>
+        <section class="adventurebookingoutput">
+            <h1>Book an Adventure</h1>
+            <form id="BookAdventureForm">
+        <!-- Total dynamic cost for package total -->
+        <fieldset>
+            <legend class="legend">Package Total</legend>
+            <p id="dynamicPackage">LKR.00.00</p>
+        </fieldset>
+        
+        <!-- Total dynamic cost for guide total -->
+        <fieldset>
+            <legend class="legend">Guide Total</legend>
+            <p id="dynamicGuide">LKR.00.00</p>
+        </fieldset>
+        
+        <!-- Total dynamic cost -->
+        <fieldset class="legend">
+            <legend>Total Cost</legend>
+            <p id="dynamic">LKR.00.00</p>
+        </fieldset>
+            </form>
+        </section>
+        </section>
+            <!-- =================Overall Output========================== -->
+            <section class="overalloutput">
+                <h1>Room Booking Total Cost</h1>
+                <p id="output"></p>
+                <h1>Adventure Total Cost</h1>
+                <p id="outputadventure"></p>
+                <p id="outputPoints"></p>
+                <button type="submit" id="#">Pay Now</button>
+            </section>
+        <script src="./script.js"></script>
+        <script src="./adventure.js"></script>
+</body>
+
+<!-- Footer  -->
+<footer class="footer">
+    <section class="section__container footer__container">
+      <section class="footer__col">
+        <h3><logo id="f-logo">
+    <a><img src="./Icons/Logo full.jpg" alt="logo"></a></logo></h3>
+      </section>
+      <section class="footer__col">
+        <h4>SITE MAP</h4>
+        <p><a href="./index.html">Home</a></p>
+        <p><a href="./about.html">About</a></p>
+        <p><a href="./accomadation.html">Accomadation</a></p>
+        <p><a href="./adventures.html">Adventures</a></p>
+        <p><a href="./restaurants.html">Restaurant</a></p>
+        <p><a href="./contact.html">Contact Us</a></p>
+        <p><a href="./booking.html">Book Now</a></p>
+        
+      </section>
+      <section class="footer__col">
+        <h4>Legal</h4>
+        <p>FAQs</p>
+        <p>Terms & Conditions</p>
+        <p>Privacy Policy</p>
+      </section>
+      <section class="footer__col">
+        <h4>Resources</h4>
+        <p>Social Media</p>
+        <p>Help Center</p>
+        <p>Partnerships</p>
+      </section>
+    </section>
+    <section class="footer__bar">
+      Copyright © 2023 Gayathri Hapukotuwa. All rights reserved.
+    </section>
+  </footer>
+         
+  <!-- footer end -->
+  
+</html>
